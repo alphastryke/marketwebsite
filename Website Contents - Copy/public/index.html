@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" type="text/css" href="../css/styles.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Delius+Unicase:wght@400;700&family=Pushster&family=Roboto:wght@300&display=swap');
+  </style>
+
+</head>
+
+<body onload ="getMarketData()">
+  <div>
+    <nav class="navbar navbar-expand-sm navbar fixedpos" style="background-color: rgb(230, 230, 230);">
+      <!-- Brand/logo -->
+
+
+      <!-- Toggler/collapsible Button -->
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="collapsibleNavbar">
+
+        <!-- Links -->
+        <ul class="z1 relative navbar-nav">
+          <li class="nav-item" id="messageText">
+            <a class="roboto redfont nav-link" href="../public/index.html">
+              <h3 class="fontsize"><b> Markets </b></span></h3>
+            </a>
+            <hr class="rounded">
+          </li>
+          <li class="nav-item" id="messageText">
+            <a class="roboto redfont nav-link" href="#" id="message" data-toggle="modal" data-target="#messageModal">
+              <h3 class="fontsize"><b> About Us </b></span></h3>
+            </a>
+          </li>
+
+          <li class="nav-item" id="messageText">
+            <a class="roboto redfont nav-link" href="#" id = "references" data-toggle="modal" data-target="#referenceModal">
+              <h3 class="fontsize"><b> References </b></span></h3>
+            </a>
+          </li>
+        </ul>
+
+
+      </div>
+    </nav>
+  </div>
+
+  <div id="marketTable" class="row" id="parent"></div>
+
+  <div w3-include-html="market-modal.html"></div>
+  <div w3-include-html="message-modal.html"></div>
+  <div w3-include-html="references.html"></div>
+</body>
+
+<script src="https://www.w3schools.com/lib/w3.js"></script>
+<script>
+  //to bring in other HTML on the fly into this page
+  w3.includeHTML();
+</script>
+
+<script src="https://www.w3schools.com/lib/w3.js"></script>
+<script src="../js/app.js"></script>
+<script src="../js/market.js"></script>
+
+</html>
